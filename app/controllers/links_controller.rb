@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
 
   before_action :set_link, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, except: [:index, :show]
+  
   def index
     @links = Link.all
   end
@@ -10,11 +11,11 @@ class LinksController < ApplicationController
   end
 
   def new
-    @link = Link.new
+    @link = current_user.links.build
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = current_user.links.build(link_params)
     if @link.save
       redirect_to @link, notice: 'Link was successfully created'
     else
@@ -41,7 +42,7 @@ class LinksController < ApplicationController
   private def set_link
     @link = Link.find(params[:id])
   end
-  
+
   private def link_params
     params.require(:link).permit(:title, :url)
   end

@@ -1,4 +1,8 @@
-<h1>all links</h1>
 <% @links.each do |link| %>
-  <p><%= link_to link.title, link_path(link) %> - <%= link.url %> </p>
+  <div class='link row clearfix'>
+    <h2>
+      <%= link_to link.title, link %></br>
+      <small class='author'>Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
+    </h2>
+  </div>    
 <% end %>

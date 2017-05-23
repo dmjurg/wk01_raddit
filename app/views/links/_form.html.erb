@@ -6,10 +6,17 @@
   </ul>
 <% end %>
 
-<%= form_for @link do |link| %>
-  <p><%= link.label :title, 'Title' %>
-  <%= link.text_field :title %></p>
-  <p><%= link.label :url, 'URL' %>
-  <%= link.text_field :url %></p>
-  <p><%= link.submit 'Submit' %></p>
-<% end %>
+
+  <%= form_for @link do |link| %>
+    <div class='form-group'>
+      <%= link.label :title, 'Title' %>
+      <%= link.text_field :title, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= link.label :url, 'URL' %>
+      <%= link.text_field :url, class: 'form-control' %>
+    </div>
+    <div class='form-group'>
+      <%= link.submit 'Submit', class: 'btn btn-primary' %>
+    </div>
+  <% end %>

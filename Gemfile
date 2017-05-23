@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'rb-readline'
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'autoprefixer-rails'
+gem 'tether-rails'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library

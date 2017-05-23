@@ -1,7 +1,14 @@
-<h1><%= @link.title %></h1>
-<h1><%= @link.url %></h1>
+<div class='page-header'>
+  <h1><a href='<%= @link.url %>'><%= @link.title %></a><br> <small>Submitted by <%= @link.user.email %></small></h1>
+</div>
+
+<div class='btn-group'>
+  <%= link_to 'Visit URL', @link.url, class: 'btn btn-primary' %>
+</div>
 
 <% if @link.user == current_user %>
-  <%= link_to 'Edit', edit_link_path(@link) %>
-  <%= link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <div class='btn-group'>
+    <%= link_to 'Edit', edit_link_path(@link), class: 'btn btn-secondary' %>
+    <%= link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary' %>
+  </div>
 <% end  %>

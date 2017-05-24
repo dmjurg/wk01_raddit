@@ -17,6 +17,8 @@ gem 'rb-readline'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'autoprefixer-rails'
 gem 'tether-rails'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'font-awesome-sass'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library

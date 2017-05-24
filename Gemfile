@@ -19,6 +19,8 @@ gem 'autoprefixer-rails'
 gem 'tether-rails'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'record_tag_helper', '~> 1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
